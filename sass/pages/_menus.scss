@@ -1,0 +1,184 @@
+// Image de couverture
+.hero-img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+}
+
+// Section principale du Menu
+.menu {
+    background-color: $color-grey;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    margin-top: -40px;
+    padding: 30px 15px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    &__title {
+        font-family: $font-logo;
+        font-size: 28px;
+        margin: 0;
+    }
+}
+
+// --- COMPOSANT COEUR (Style validé page d'accueil) ---
+.heart-btn {
+    position: relative;
+    cursor: pointer;
+
+    .heart-checkbox {
+        display: none; // Cache la checkbox technique
+    }
+
+    .heart-label {
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .heart-icon {
+        transition: opacity 0.3s ease-in-out;
+
+        &--full {
+            position: absolute;
+            background: linear-gradient($color-primary, $color-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0; // Caché par défaut
+        }
+    }
+
+    // Comportement au clic (Checkbox Hack)
+    .heart-checkbox:checked + .heart-label {
+        .heart-icon--full {
+            opacity: 1;
+        }
+        .heart-icon--empty {
+            opacity: 0;
+        }
+    }
+}
+
+// --- CATEGORIES (Entrées, Plats, Desserts) ---
+.menu__category {
+    margin-top: 40px;
+
+    &-title {
+        font-size: 16px;
+        font-weight: $weight-light;
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 5px;
+        margin-bottom: 12px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background-color: $color-tertiary;
+        }
+    }
+}
+
+// --- ITEMS DU MENU (Plats) ---
+.menu-item {
+    background-color: $color-white;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__container {
+        display: flex;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    &__content {
+        padding: 12px;
+        flex: 1;
+        min-width: 0;
+        
+        h3, p {
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: $weight-bold;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: $weight-light;
+            margin-top: 5px;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        padding: 12px;
+        font-weight: $weight-bold;
+        transition: margin-right 0.5s ease;
+    }
+
+    &__check {
+        background-color: $color-tertiary;
+        margin-right: -60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: margin-right 0.5s ease;
+    }
+
+    &__icon {
+        height: 20px;
+        width: 20px;
+        background-color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        
+        i {
+            color: $color-tertiary;
+            font-size: 12px;
+        }
+    }
+
+    &__checkbox:checked + &__container {
+        .menu-item__check {
+            margin-right: 0;
+        }
+    }
+}
+
+.menu__order {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}

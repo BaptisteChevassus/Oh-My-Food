@@ -11,4 +11,13 @@ header {
         width: 197px;
         height: auto;
     }
+    
+    .header__arrow {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: #353535;
+    }
 }

@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
@@ -37,7 +36,7 @@ p {
 
 .btn {
   border: none;
-  padding: 15px 20px;
+  padding: 16px 49px;
   border-radius: 100px;
   color: #FFFFFF;
   font-weight: 500;
@@ -45,10 +44,9 @@ p {
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 0.6s;
 }
 .btn:hover {
-  transform: scale(1.02);
   opacity: 0.9;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
 }
@@ -117,6 +115,14 @@ header {
 header .header__logo {
   width: 197px;
   height: auto;
+}
+header .header__arrow {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #353535;
 }
 
 .location {
@@ -327,4 +333,160 @@ header .header__logo {
 .footer__icon {
   width: 13px;
   font-size: 13px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  margin-top: -40px;
+  padding: 30px 15px;
+}
+.menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  background-color: transparent;
+  box-shadow: none;
+}
+.menu__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  margin: 0;
+}
+
+.heart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.heart-btn .heart-checkbox {
+  display: none;
+}
+.heart-btn .heart-label {
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.heart-btn .heart-icon {
+  transition: opacity 0.3s ease-in-out;
+}
+.heart-btn .heart-icon--full {
+  position: absolute;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.heart-btn .heart-checkbox:checked + .heart-label .heart-icon--full {
+  opacity: 1;
+}
+.heart-btn .heart-checkbox:checked + .heart-label .heart-icon--empty {
+  opacity: 0;
+}
+
+.menu__category {
+  margin-top: 40px;
+}
+.menu__category-title {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+}
+.menu__category-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+}
+
+.menu-item {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+}
+.menu-item__checkbox {
+  display: none;
+}
+.menu-item__container {
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+}
+.menu-item__content {
+  padding: 12px;
+  flex: 1;
+  min-width: 0;
+}
+.menu-item__content h3, .menu-item__content p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-item__content h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.menu-item__content p {
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+.menu-item__price {
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  font-weight: 700;
+  transition: margin-right 0.5s ease;
+}
+.menu-item__check {
+  background-color: #99E2D0;
+  margin-right: -60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: margin-right 0.5s ease;
+}
+.menu-item__icon {
+  height: 20px;
+  width: 20px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.menu-item__icon i {
+  color: #99E2D0;
+  font-size: 12px;
+}
+.menu-item__checkbox:checked + .menu-item__container .menu-item__check {
+  margin-right: 0;
+}
+
+.menu__order {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
 }/*# sourceMappingURL=style.css.map */
