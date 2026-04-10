@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.btn {
+  border: none;
+  padding: 15px 20px;
+  border-radius: 100px;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 16px;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+.card__btn {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+}
+.card__btn .heart-checkbox {
+  display: none;
+}
+.card__btn:hover .card__icon--full {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+.card__btn .heart-checkbox:checked + .heart-label .card__icon--full {
+  opacity: 1;
+  transform: scale(1);
+}
+.card__btn .heart-checkbox:checked + .heart-label .card__icon--empty {
+  opacity: 0;
+}
+
+.heart-label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card__icon {
+  position: absolute;
+  font-size: 22px;
+  transition: all 0.3s ease-in-out;
+}
+.card__icon--empty {
+  z-index: 2;
+  color: #000;
+}
+.card__icon--full {
+  z-index: 1;
+  opacity: 0;
+  transform: scale(0);
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  position: relative;
+  z-index: 999;
+}
+header .header__logo {
+  width: 197px;
+  height: auto;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  padding: 15px;
+  gap: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.location__icon {
+  color: #353535;
+}
+.location__text {
+  font-weight: 700;
+  color: #353535;
+}
+
+.hero {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #F6F6F6;
+}
+.hero__title {
+  margin: 0;
+}
+.hero__text {
+  margin: 15px 0 30px 0;
+  color: #4d4d4d;
+}
+
+.step {
+  padding: 50px 20px;
+}
+.step__title {
+  margin-bottom: 25px;
+}
+.step__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-left: 12px;
+  list-style: none;
+  counter-reset: steps;
+}
+.step__item {
+  display: flex;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.step__item:hover {
+  background-color: rgb(241.5, 233.875, 250.625);
+}
+.step__item:hover .step__icon {
+  color: #9356DC;
+}
+.step__number {
+  position: absolute;
+  left: -12px;
+  background-color: #9356DC;
+  color: #FFFFFF;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.step__icon {
+  margin-right: 20px;
+  color: #7e7e7e;
+  font-size: 18px;
+}
+.step__text {
+  font-weight: 700;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 50px 20px;
+}
+.restaurants .container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.restaurants__title {
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+}
+.card__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card__img {
+  width: 100%;
+  height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  color: rgb(38.7404580153, 136.2595419847, 112.213740458);
+  padding: 7px 12px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 1;
+}
+.card__content {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.card__txt h3 {
+  margin: 0 0 5px 0;
+}
+.card__txt p {
+  margin: 0;
+  font-weight: 300;
+}
+.card__btn {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+}
+.card__btn .heart-checkbox {
+  display: none;
+}
+.card__btn .heart-checkbox:checked + .heart-label .card__icon--full {
+  opacity: 1;
+  transform: scale(1);
+}
+.card__btn .heart-checkbox:checked + .heart-label .card__icon--empty {
+  opacity: 0;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 25px;
+  color: white;
+}
+.footer .container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.footer__logo {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 20px;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__item {
+  margin-bottom: 10px;
+}
+.footer__item:last-child {
+  margin-bottom: 0;
+}
+.footer__link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__icon {
+  width: 13px;
+  font-size: 13px;
+}/*# sourceMappingURL=style.css.map */

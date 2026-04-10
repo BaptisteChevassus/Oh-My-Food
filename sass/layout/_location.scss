@@ -1,0 +1,19 @@
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: 15px;
+    gap: 15px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+
+    &__icon {
+        color: #353535;
+    }
+
+    &__text {
+        font-weight: $weight-bold;
+        color: #353535;
+    }
+}

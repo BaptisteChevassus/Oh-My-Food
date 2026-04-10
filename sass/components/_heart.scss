@@ -1,0 +1,58 @@
+.card__btn {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+
+    .heart-checkbox {
+        display: none;
+    }
+
+    &:hover .card__icon--full {
+        transform: scale(1.1);
+        opacity: 0.5; 
+    }
+
+    .heart-checkbox:checked + .heart-label {
+        .card__icon--full {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .card__icon--empty {
+            opacity: 0;
+        }
+    }
+}
+
+.heart-label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.card__icon {
+    position: absolute;
+    font-size: 22px;
+    transition: all 0.3s ease-in-out;
+    
+    &--empty {
+        z-index: 2;
+        color: #000;
+    }
+
+    &--full {
+        z-index: 1;
+        opacity: 0;
+        transform: scale(0);
+        background: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

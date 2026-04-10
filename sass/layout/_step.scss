@@ -1,0 +1,59 @@
+.step {
+    padding: 50px 20px;
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding-left: 12px; // Pour laisser de la place au chiffre qui dépasse
+        list-style: none;
+        counter-reset: steps; // Alternative si tu ne veux pas écrire les chiffres en dur
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        background-color: $color-grey;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px 0px #00000026;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: lighten($color-primary, 35%);
+            .step__icon {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__number {
+        position: absolute;
+        left: -12px;
+        background-color: $color-primary;
+        color: $color-white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    &__icon {
+        margin-right: 20px;
+        color: $color-darkgrey;
+        font-size: 18px;
+    }
+
+    &__text {
+        font-weight: $weight-bold;
+    }
+}
