@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../utils/variables" as *;
+
 .restaurants {
     background-color: #f6f6f6;
     padding: 50px 20px; // Aligné sur la section .step
@@ -46,7 +49,7 @@
         top: 15px;
         right: 15px;
         background-color: $color-tertiary;
-        color: darken($color-tertiary, 40%);
+        color: color.adjust($color-tertiary, $lightness: -40%);
         padding: 7px 12px;
         border-radius: 2px;
         font-size: 14px;

@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../utils/variables" as *;
+
 .step {
     padding: 50px 20px;
 
@@ -26,7 +29,7 @@
         transition: background-color 0.3s;
 
         &:hover {
-            background-color: lighten($color-primary, 35%);
+            background-color: color.adjust($color-primary, $lightness: 35%);
             .step__icon {
                 color: $color-primary;
             }
