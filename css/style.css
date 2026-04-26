@@ -51,7 +51,7 @@ p {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
 }
 
-.card__btn {
+.heart-btn {
   position: absolute;
   right: 25px;
   bottom: 25px;
@@ -59,18 +59,14 @@ p {
   width: 30px;
   height: 30px;
 }
-.card__btn .heart-checkbox {
+.heart-btn .heart-checkbox {
   display: none;
 }
-.card__btn:hover .card__icon--full {
-  transform: scale(1.1);
-  opacity: 0.5;
-}
-.card__btn .heart-checkbox:checked + .heart-label .card__icon--full {
+.heart-btn .heart-checkbox:checked + .heart-label .card__icon--full {
   opacity: 1;
   transform: scale(1);
 }
-.card__btn .heart-checkbox:checked + .heart-label .card__icon--empty {
+.heart-btn .heart-checkbox:checked + .heart-label .card__icon--empty {
   opacity: 0;
 }
 
@@ -363,38 +359,6 @@ header .header__arrow {
   margin: 0;
 }
 
-.heart-btn {
-  position: relative;
-  cursor: pointer;
-}
-.heart-btn .heart-checkbox {
-  display: none;
-}
-.heart-btn .heart-label {
-  font-size: 24px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.heart-btn .heart-icon {
-  transition: opacity 0.3s ease-in-out;
-}
-.heart-btn .heart-icon--full {
-  position: absolute;
-  background: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0;
-}
-.heart-btn .heart-checkbox:checked + .heart-label .heart-icon--full {
-  opacity: 1;
-}
-.heart-btn .heart-checkbox:checked + .heart-label .heart-icon--empty {
-  opacity: 0;
-}
-
 .menu__category {
   margin-top: 40px;
 }
@@ -457,7 +421,6 @@ header .header__arrow {
   align-items: flex-end;
   padding: 12px;
   font-weight: 700;
-  transition: margin-right 0.5s ease;
 }
 .menu-item__check {
   background-color: #99E2D0;

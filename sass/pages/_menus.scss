@@ -31,47 +31,6 @@
     }
 }
 
-// --- COMPOSANT COEUR (Style validé page d'accueil) ---
-.heart-btn {
-    position: relative;
-    cursor: pointer;
-
-    .heart-checkbox {
-        display: none; // Cache la checkbox technique
-    }
-
-    .heart-label {
-        font-size: 24px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    }
-
-    .heart-icon {
-        transition: opacity 0.3s ease-in-out;
-
-        &--full {
-            position: absolute;
-            background: linear-gradient($color-primary, $color-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 0; // Caché par défaut
-        }
-    }
-
-    // Comportement au clic (Checkbox Hack)
-    .heart-checkbox:checked + .heart-label {
-        .heart-icon--full {
-            opacity: 1;
-        }
-        .heart-icon--empty {
-            opacity: 0;
-        }
-    }
-}
-
 // --- CATEGORIES (Entrées, Plats, Desserts) ---
 .menu__category {
     margin-top: 40px;
@@ -144,7 +103,6 @@
         align-items: flex-end;
         padding: 12px;
         font-weight: $weight-bold;
-        transition: margin-right 0.5s ease;
     }
 
     &__check {

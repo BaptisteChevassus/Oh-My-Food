@@ -1,6 +1,6 @@
 @use "../utils/variables" as *;
 
-.card__btn {
+.heart-btn {
     position: absolute;
     right: 25px;
     bottom: 25px;
@@ -10,11 +10,6 @@
 
     .heart-checkbox {
         display: none;
-    }
-
-    &:hover .card__icon--full {
-        transform: scale(1.1);
-        opacity: 0.5; 
     }
 
     .heart-checkbox:checked + .heart-label {
