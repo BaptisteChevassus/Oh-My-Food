@@ -60,3 +60,13 @@
         font-weight: $weight-bold;
     }
 }
+
+@include tablet-and-up {
+    .step__list {
+        flex-direction: row;
+    }
+
+    .step__item {
+        flex: 1;
+    }
+}

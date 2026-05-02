@@ -6,8 +6,6 @@
     color: white;
 
     .container {
-        // Optionnel : permet d'aligner le footer si tu as un container global
-        max-width: 1280px;
         margin: 0 auto;
     }
 
@@ -48,5 +46,30 @@
     &__icon {
         width: 13px; // Force une largeur fixe pour que les textes soient alignés
         font-size: 13px;
+    }
+}
+
+@include tablet-and-up {
+    .footer .container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 40px;
+
+    }
+
+    .footer__logo {
+        margin-bottom: 0;
+        order: 1;
+        padding-left:100px;
+    }
+
+    .footer__list {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer__item {
+        margin-bottom: 0;
     }
 }
