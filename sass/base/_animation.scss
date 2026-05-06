@@ -1,10 +1,70 @@
-@keyframes itemAppear{
-0% {
+@use "../utils/variables" as *;
+
+@keyframes itemAppear {
+    0% {
         transform: translateY(20px);
         opacity: 0;
     }
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes loaderFade {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes l43 {
+    0%   { transform: translateY(0); }
+    25%  { transform: translateY(-10px); }
+    50%  { transform: translateY(10px); }
+    75%  { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes lFinal {
+    0%   { transform: translateY(0); }
+    40%  { transform: translateY(-12px); }
+    70%  { transform: translateY(4px); }
+    100% { transform: translateY(0); }
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, $color-secondary, $color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loaderFade 0.5s ease 4.5s forwards;
+    z-index: 9999;
+
+    &__text {
+        font-family: $font-logo;
+        font-size: 42px;
+        color: $color-white;
+        display: flex;
+
+        span {
+            display: inline-block;
+            animation: 
+                l43 1.5s linear 2,
+                lFinal 0.6s ease 3.56s forwards;
+
+            @for $i from 1 through 8 {
+                &:nth-child(#{$i}) {
+                    animation-delay: 
+                        #{($i - 1) * 0.08s},
+                        3.56s;
+                }
+            }
+        }
     }
 }
