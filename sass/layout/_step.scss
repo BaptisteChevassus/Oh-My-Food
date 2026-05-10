@@ -12,9 +12,8 @@
         display: flex;
         flex-direction: column;
         gap: 25px;
-        padding-left: 12px; // Pour laisser de la place au chiffre qui dépasse
+        padding-left: 12px; 
         list-style: none;
-        counter-reset: steps; // Alternative si tu ne veux pas écrire les chiffres en dur
     }
 
     &__item {

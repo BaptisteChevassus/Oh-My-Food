@@ -163,7 +163,6 @@ header .header__arrow {
   gap: 25px;
   padding-left: 12px;
   list-style: none;
-  counter-reset: steps;
 }
 .step__item {
   display: flex;
@@ -236,8 +235,6 @@ header .header__arrow {
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  color: inherit;
   overflow: hidden;
 }
 .card__link {
@@ -268,7 +265,6 @@ header .header__arrow {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 .card__txt h3 {
   margin: 0 0 5px 0;
@@ -276,24 +272,6 @@ header .header__arrow {
 .card__txt p {
   margin: 0;
   font-weight: 300;
-}
-.card__btn {
-  position: absolute;
-  right: 25px;
-  bottom: 25px;
-  z-index: 10;
-  width: 30px;
-  height: 30px;
-}
-.card__btn .heart-checkbox {
-  display: none;
-}
-.card__btn .heart-checkbox:checked + .heart-label .card__icon--full {
-  opacity: 1;
-  transform: scale(1);
-}
-.card__btn .heart-checkbox:checked + .heart-label .card__icon--empty {
-  opacity: 0;
 }
 
 @media (min-width: 768px) {
@@ -362,9 +340,6 @@ header .header__arrow {
     display: flex;
     gap: 20px;
   }
-  .footer__item {
-    margin-bottom: 0;
-  }
 }
 .hero-img {
   width: 100%;
@@ -385,7 +360,6 @@ header .header__arrow {
   align-items: center;
   justify-content: space-between;
   padding: 0 5px;
-  background-color: transparent;
   box-shadow: none;
 }
 .menu__header .heart-btn {
@@ -425,7 +399,7 @@ header .header__arrow {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 100%;
-  animation: itemAppear 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: itemAppear 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) backwards;
 }
 .menu-item--1 {
   animation-delay: 0.1s;
@@ -525,12 +499,14 @@ header .header__arrow {
     max-width: 70vw;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 210px;
-    padding-right: 210px;
   }
   .menu__header {
     justify-content: center;
     gap: 24px;
+  }
+  .menu__category {
+    max-width: 50vw;
+    margin: auto;
   }
 }
 @keyframes itemAppear {

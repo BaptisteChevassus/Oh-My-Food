@@ -3,14 +3,14 @@
 
 .restaurants {
     background-color: #f6f6f6;
-    padding: 50px 20px; // Aligné sur la section .step
+    padding: 50px 20px; 
 
     .container {
         margin: 0 auto;
     }
 
     &__title {
-        margin-bottom: 25px; // Même espacement que .step__title
+        margin-bottom: 25px; 
     }
 }
 
@@ -27,8 +27,6 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    color: inherit;
     overflow: hidden; // Correction : force l'image à respecter les arrondis de la carte
 
     &__link {
@@ -61,7 +59,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
     }
 
     &__txt {
@@ -74,30 +71,6 @@
         }
     }
 
-    // Zone du bouton coeur (Checkbox Hack)
-    &__btn {
-        position: absolute;
-        right: 25px;
-        bottom: 25px;
-        z-index: 10; // Priorité sur le lien de la carte
-        width: 30px;
-        height: 30px;
-
-        .heart-checkbox {
-            display: none;
-        }
-
-        // État quand on clique (Checkbox cochée)
-        .heart-checkbox:checked + .heart-label {
-            .card__icon--full {
-                opacity: 1;
-                transform: scale(1);
-            }
-            .card__icon--empty {
-                opacity: 0;
-            }
-        }
-    }
 }
 
 @include tablet-and-up {
