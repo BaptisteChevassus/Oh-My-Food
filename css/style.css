@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -212,7 +212,7 @@ header .header__arrow {
   }
 }
 .restaurants {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   padding: 50px 20px;
 }
 .restaurants .container {
@@ -329,12 +329,11 @@ header .header__arrow {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 40px;
+    gap: 120px;
   }
   .footer__logo {
     margin-bottom: 0;
     order: 1;
-    padding-left: 100px;
   }
   .footer__list {
     display: flex;
@@ -509,7 +508,8 @@ header .header__arrow {
   }
   .menu__category {
     max-width: 50vw;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @keyframes itemAppear {

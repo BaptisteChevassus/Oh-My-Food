@@ -2,7 +2,7 @@
 @use "../utils/variables" as *;
 
 .restaurants {
-    background-color: #f6f6f6;
+    background-color: $color-grey;
     padding: 50px 20px; 
 
     .container {
