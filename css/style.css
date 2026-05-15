@@ -428,6 +428,9 @@ header .header__arrow {
 .menu-item--9 {
   animation-delay: 0.9s;
 }
+.menu-item--10 {
+  animation-delay: 1s;
+}
 .menu-item__checkbox {
   display: none;
 }
