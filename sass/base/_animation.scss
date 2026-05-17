@@ -43,7 +43,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: loaderFade 0.5s ease 4.5s forwards;
+    animation: loaderFade 0.5s ease 2.5s forwards;
     z-index: 9999;
 
     &__text {
@@ -55,14 +55,15 @@
         span {
             display: inline-block;
             animation: 
-                l43 1.5s linear 2,
-                lFinal 0.6s ease 3.56s forwards;
+                 l43 1.5s linear 1,
+                 lFinal 0.44s ease 2.06s forwards;
+
 
             @for $i from 1 through 8 {
                 &:nth-child(#{$i}) {
                     animation-delay: 
                         #{($i - 1) * 0.08s},
-                        3.56s;
+                        2.06s;
                 }
             }
         }
